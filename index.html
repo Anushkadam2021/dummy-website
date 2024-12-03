@@ -65,6 +65,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         fbq('track', 'Lead'); // Custom Event for Lead
     });
 </script>
+<script>
+    // Data Layer Push for Product View Event
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        'event': 'productView',  // Event name
+        'productId': '12345',    // Product ID
+        'productName': 'Sample Product'  // Product name
+    });
+
+    // Data Layer Push for Purchase Event
+    document.getElementById('purchaseBtn').addEventListener('click', function() {
+        window.dataLayer.push({
+            'event': 'purchase',  // Event name
+            'transactionId': 'order12345',  // Transaction ID
+            'transactionAmount': 30.00  // Transaction amount
+        });
+    });
+</script>
 
 </body>
 </html>
