@@ -83,6 +83,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         });
     });
 </script>
+<script>
+    document.getElementById('addToCartBtn').addEventListener('click', function() {
+        window.dataLayer.push({
+            'event': 'AddToCart',
+            'productId': '12345', // Example product ID
+            'productName': 'Sample Product'
+        });
+    });
+</script>
+<script>
+    document.getElementById('purchaseBtn').addEventListener('click', function() {
+        window.dataLayer.push({
+            'event': 'purchase',
+            'transactionId': 'order12345', // Example order ID
+            'transactionAmount': 30.00
+        });
+    });
+</script>
+ <script>
+    document.getElementById('leadBtn').addEventListener('click', function() {
+        window.dataLayer.push({
+            'event': 'Lead',
+            'leadName': 'User123',
+            'leadEmail': 'user@example.com'
+        });
+    });
+</script>
+<script>
+    document.getElementById('customEventBtn').addEventListener('click', function() {
+        window.dataLayer.push({
+            'event': 'customEvent',
+            'eventCategory': 'Special Offer',
+            'eventAction': 'Button Clicked',
+            'eventLabel': 'Promo Button'
+        });
+    });
+</script>
 
 </body>
 </html>
